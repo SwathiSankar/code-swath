@@ -28,11 +28,13 @@ void main()
   
   printf("The transpose of the matrix is \n");
   for(i=0;i<n;i++)
- {
-  for(j=0;j<n;j++)
   {
-   printf("%d",a[i][j]);
-  }printf("\n");
- }
+  for(j=0;j<n;j++)
+   {
+    printf("%d",a[i][j]);
+   }printf("\n");
+  }
+  
+}
   
   
