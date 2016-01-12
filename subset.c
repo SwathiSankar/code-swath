@@ -1,14 +1,16 @@
 #include<stdio.h>
 void main()
 {
-int n,s,i,j,k,m,a[50],x;
+int n,i,y,k,j,z,a[50],x;
 
-printf(“Enter the size of main set :”);
-scanf("%d",&n);
+printf("Enter the size of main set :");
+scanf(“%d”,&n);
 
-printf(“Enter the elements of main set :”);
+printf("Enter the elements of main set :");
 for(x=0;x<n;x++)
-scanf("%d",&a[x]);
+scanf(“%d”,&a[x]);
+
+printf("The subsets are :\n");
 
 for(i=1;i<=n;i++)
 {
@@ -18,12 +20,12 @@ if(i==1)
 printf("%d\n",a[j]);
 else
 {
-m=j+i-1;
-for(k=m;k<n;k++)
+z=j+i-1;
+for(k=z;k<n;k++)
 {
-for(l=j;l<m;i++)
-printf(“%d”,a[l]);
-printf(“%d\n”,a[k]);
+for(y=j;y<z;y++)
+printf("%d",a[y]);
+printf("%d\n",a[k]);
 }
 }
 }
