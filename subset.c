@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-int n,i,y,k,j,z,a[50],x;
+int n,i,j,k,a[50],x,y,z;
 
 printf("Enter the size  :");
 scanf("%d",&n);
