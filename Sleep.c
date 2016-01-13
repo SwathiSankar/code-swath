@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<Windows.h>
+#include<unistd.h>
 
 int main()
 {
