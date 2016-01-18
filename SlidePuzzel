@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+void display(int i,int j,int a[][4])
+{ 
+
+   for(i=0;i<4;i++)
+      {
+        for(j=0;j<4;j++)
+         {
+           printf("%d",a[i][j]);
+         }
+         printf("\n");
+      }
+ }
+  
+
+void emptyspace(int i,int j,int a[][4])
+{  
+    
+    for(i=0;i<4;i++)
+      {
+        for(j=0;j<4;j++)
+         {
+            if(a[i][j]==0)
+              {
+                 row=i;
+                 col=j;
+              }
+          }
+      }
+ }
+
+
+void complete(int i,int j,int a[][4])
+{
+
+	int num=1;
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<4;j++)
+		{
+			if(a[i][j]==num && a[3][3]==0)
+			{
+				num++;
+			}
+		}
+	}
+	if(num==9)
+	{
+		printf("Completed");
+	}
+	
+}
+
+
+void main()
+{
+  int a[4][4]={{2,1,4,3},{6,5,0,7},{9,8,11,10},{13,12,15,14}};
+  int d,row,col,temp,i,j;
+     do
+       {
+          display(i,j,a);
+          
+          printf("Press U->Up D->Down L->Left R->Right Q->Quit");
+          scanf("%d",&d);
+            
+          emptyspace(i,j,a);
+          
+          switch(d)
+          {
+             case 'U': i=row-1;
+                      j=col;
+                      break;
+                      
+             case 'D':i=row+1;
+                      j=col;
+                      break;
+                      
+             case 'L':i=row;
+                      j=col-1;
+                      break;
+                      
+             case 'R':i=row;
+                      j=col+1;
+                      break;
+            
+             default:printf("Invalid choice");
+             
+           }
+           
+                if((i!=-1)&&(i!=3)&&(j!=-1)&&(j!=3))
+                  {
+                        temp=a[row][col];
+                        a[row][col]=a[i][j];
+                       a[i][j]=temp;
+                  }
+           
+            complete(i,j,a);
+           
+        }while(d!='Q');
+        
+        
+}
