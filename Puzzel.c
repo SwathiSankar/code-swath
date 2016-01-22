@@ -2,6 +2,7 @@
 
 
 void display(int [4][4]);
+void complete(int [4][4]);
 
 
 int main()
@@ -64,17 +65,41 @@ int main()
     }while(d!='Q');
     
     display(a);
+    complete(a);
     return 0;
+}
+
+
+void complete(int a[][4])
+{
+
+	int num=1,i,j;
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<4;j++)
+		{
+			if(a[i][j]==num && a[4][4]==0)
+			{
+				num++;
+			}
+		}
+	}
+	if(num==9)
+	{
+		printf("Completed");
+	}
+	else 
+	{
+	    printf("\n Puzzel Not Complete....Try Finishing the game");
+	}
+	
 }
 
 
 
 
 
-
-
-
-void display(int a[4][4])
+void display(int a[][4])
 {
     int i,j;
     for( i=0;i<4;i++)
@@ -86,4 +111,5 @@ void display(int a[4][4])
 	printf("\n");
     }
 }
+
 
