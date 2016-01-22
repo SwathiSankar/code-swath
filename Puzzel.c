@@ -90,7 +90,7 @@ void complete(int a[][4])
 	}
 	else 
 	{
-	    printf("\n Puzzel Not Complete....Try Finishing the game");
+	    printf("\n Puzzel InComplete....Try Finishing the game");
 	}
 	
 }
