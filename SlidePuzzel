@@ -57,13 +57,14 @@ void complete(int i,int j,int a[][4])
 void main()
 {
   int a[4][4]={{2,1,4,3},{6,5,0,7},{9,8,11,10},{13,12,15,14}};
-  int d,row,col,temp,i,j;
+  int row,col,temp,i,j;
+  char d;
      do
        {
           display(i,j,a);
           
           printf("Press U->Up D->Down L->Left R->Right Q->Quit");
-          scanf("%d",&d);
+          scanf("%c",&d);
             
           emptyspace(i,j,a);
           
