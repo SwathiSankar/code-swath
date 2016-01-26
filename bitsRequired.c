@@ -14,7 +14,7 @@ int main()
        while(n>0)
        {
        	     n=n/2;
-	           count++;
+	     count++;
        }
 
      printf("%d",count);
