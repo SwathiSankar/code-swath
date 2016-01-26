@@ -8,7 +8,7 @@ int main()
      
        if(n==0)
        {
-       	     printf("1");
+       	     count=1;
        }
        else
        {
