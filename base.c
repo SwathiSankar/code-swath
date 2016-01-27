@@ -1,30 +1,42 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-  int n,a[10],i=0,b,c=0,rev=0;
-  scanf("%d",&n);
-  scanf("%d",&b);
+     int num,req_num,base;
+    printf("Enter the number and the base \n");
+     scanf("%d %d",&num,&base);
+     
+     conversion(num,base);
   
-  while(n>=1)
-  {
-   a[i]=n%b;
-   n=n/b;
-  
-   i++;
-   c++;
-  }
-  
-  for(i=c-1;i>=0;i--)
-   {
-      while(a[i]!=0)
-       {
-         a[i]=a[i]%10;
-         rev=rev*10+a[i];
-         a[i]=a[i]/10;
-       }
-       
-       
-   }
-  
+    
+     return 0;
+     
+    
+}
+
+void conversion(int num,int base)
+{
+      int i=0,c=0,a[10];  
+      while(num!=0)
+      {
+            a[i] = num % base;
+            num = num / base;
+            i++;
+            c++;
+
+      }
+
+      for(i=c-1;i>=0;i--)
+      {
+          if(a[i]<=9)
+          {
+               printf("%d",a[i]);
+          }
+
+          else
+          {
+            printf("%d",a[i]+55);
+          }
+      }
+
 }
