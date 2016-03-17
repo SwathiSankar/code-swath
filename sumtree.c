@@ -34,7 +34,7 @@ int sumtree(struct tree *node)
 	}
 	else
 	{
-        leftn=node->left + node->left->left + node->left->right;
+        	leftn=node->left + node->left->left + node->left->right;
 		rightn=node->right + node->right->right;
 		if(node->data==leftn+rightn)
 		{
@@ -64,7 +64,14 @@ int main()
 
 	sum=sumtree(root);
 	
-	if
+	if(sum==1)
+	{
+		printf("The given tree is sumtree");
+	}
+	else
+	{
+		printf("The given tree is not sumtee");
+	}
 
 	return 0;
 }
